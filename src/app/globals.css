@@ -1,6 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Roboto&display=swap");
+@import "~bootstrap/dist/css/bootstrap.min.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.swiper {
+  height: 100%;
+  width: 100%;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  transform: scale(2);
+  transform-origin: center;
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -44,7 +56,8 @@
  *    15.  Contact     *
  *    16.  Footer      *
  ======================*/
- @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Roboto&display=swap");
+
+
  h1 {
    font-size: 42px !important;
  }

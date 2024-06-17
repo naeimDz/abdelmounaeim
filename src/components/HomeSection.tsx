@@ -1,10 +1,16 @@
 // components/HomeSection.js
 
+import Link from 'next/link';
 import React from 'react';
 
-const HomeSection = () => {
+
+export default function HomeSection () {
+
   return (
-    <section className="bg-home bg-light d-table w-100" style={{ backgroundImage: "url('/images/home/01.png')" }} id="home">
+
+    <>
+ 
+    <section className="bg-home bg-light d-table w-100" id="home">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-12">
@@ -15,8 +21,8 @@ const HomeSection = () => {
                 Obviously I'm a Web Designer. Web Developer with over 3 years of experience. Experienced with all stages of the development cycle for dynamic web projects.
               </p>
               <div className="mt-4 pt-2">
-                <a href="javascript:void(0)" className="btn btn-primary rounded mb-2 mr-2">Hire me</a>
-                <a href="javascript:void(0)" className="btn btn-outline-primary rounded mb-2">Download CV <i data-feather="download" className="fea icon-sm"></i></a>
+                <Link href="/" className="btn btn-primary rounded mb-2 mr-2">Hire me</Link>
+                <Link href="/" className="btn btn-outline-primary rounded mb-2">Download CV <i data-feather="download" className="fea icon-sm"></i></Link>
               </div>
             </div>
           </div>
@@ -25,8 +31,21 @@ const HomeSection = () => {
       <a href="#about" data-scroll-nav="1" className="mouse-icon rounded-pill bg-transparent mouse-down">
         <span className="wheel position-relative d-block mover"></span>
       </a>
-    </section>
+    </section></>
   );
 };
 
-export default HomeSection;
+
+export async function getStaticProps() {
+  // Call an external API endpoint to get posts.
+ // You can use any data fetching library
+ const res = await fetch('https://api.github.com/repos/vercel/next.js')
+ const posts = await res.json()
+     // By returning { props: { data } }, the component
+ // will receive `data` as a prop at build time
+   return {
+     props: {posts},
+       
+
+     }
+   }

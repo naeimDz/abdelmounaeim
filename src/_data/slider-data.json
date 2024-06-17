@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "title": "Sustainable Farming",
+      "tagline": "Helping you achieve better crop yields sustainably.",
+      "image": "/images/image1.jpg",
+      "buttons": [
+        {
+          "id": 1,
+          "text": "call now",
+          "link": "https://facebook.com/abdelmounaeim17",
+          "type": "btn-dark btn-circle"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Innovative Solutions",
+      "tagline": "Providing cutting-edge technology for agriculture.",
+      "image": "/images/image2.jpg",
+      "buttons": [
+        {
+          "id": 1,
+          "text": "Schedule Now",
+          "link": "https://facebook.com/abdelmounaeim17",
+          "type": "btn-dark btn-circle"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Welcome to Argitek",
+      "tagline": "Analyzing soil and weather data.",
+      "image": "/images/image3.jpg",
+      "buttons": [
+        {
+          "id": 1,
+          "text": "Find Us",
+          "link": "https://facebook.com/abdelmounaeim17",
+          "type": "btn-dark btn-circle"
+        }
+      ]
+    }
+  ]
+  
