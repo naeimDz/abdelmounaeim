@@ -24,11 +24,7 @@ const Navbar = () => {
                 About me
               </Link>
             </li>
-            <li key="/dji" className="nav-item">
-              <Link className="nav-link"href="/dji">
-                Dji
-              </Link>
-            </li>
+
             <li  key="/portfolio" className="nav-item">
               <Link className="nav-link"href="/portfolio">
                 Portfolio

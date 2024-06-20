@@ -3,6 +3,14 @@ import "../styles/globals.css";
 import Head from "next/head";
 import Script from "next/script";
 import Navbar from "@/components/Portfolio/Navbar";
+import { AuthProvider } from "@/utils/context/AuthContext";
+import { ErrorProvider } from "@/utils/context/ErrorContext";
+import { ThemeProvider } from "@/utils/context/ThemeContext";
+import { LanguageProvider } from "@/utils/context/LanguageContext";
+import { NotificationProvider } from "@/utils/context/NotificationContext";
+import { SettingsProvider } from "@/utils/context/SettingsContext";
+import { ModalProvider } from "@/utils/context/ModalContext";
+
 
 export const metadata: Metadata = {
   title: "AbdelMounaeim Portfolio",
@@ -15,6 +23,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+    <AuthProvider>
+    <ErrorProvider>
+      <ThemeProvider>
+        <LanguageProvider>
+          <NotificationProvider>
+            <SettingsProvider>
+              <ModalProvider>
     <html lang="en">
       <Head>
         <meta charSet="UTF-8" />
@@ -30,6 +45,7 @@ export default function RootLayout({
         <link href="css/colors/default.css" rel="stylesheet" id="color-opt" />
       </Head>
       <body>
+      <Navbar />
         <section>{children}</section>
         <Script src="js/jquery.min.js" strategy="beforeInteractive" />
         <Script src="js/bootstrap.bundle.min.js" strategy="beforeInteractive" />
@@ -49,5 +65,14 @@ export default function RootLayout({
         <Script src="js/app.js" strategy="lazyOnload" />
       </body>
     </html>
+    </ModalProvider>
+              </SettingsProvider>
+            </NotificationProvider>
+          </LanguageProvider>
+        </ThemeProvider>
+      </ErrorProvider>
+    </AuthProvider>
   );
 }
+
+
