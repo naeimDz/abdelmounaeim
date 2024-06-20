@@ -1,7 +1,7 @@
 // components/HomeSection.js
 
-import Link from 'next/link';
-import React from 'react';
+import Link from "next/link";
+import React from "react";
 
 
 export default function HomeSection () {
@@ -16,9 +16,9 @@ export default function HomeSection () {
           <div className="col-lg-12">
             <div className="title-heading mt-5">
               <h6 className="sub-title">Looking for a Designer !</h6>
-              <h1 className="heading text-primary mb-3">I'm Cristino Murphy</h1>
+              <h1 className="heading text-primary mb-3">Im Cristino Murphy</h1>
               <p className="para-desc text-muted">
-                Obviously I'm a Web Designer. Web Developer with over 3 years of experience. Experienced with all stages of the development cycle for dynamic web projects.
+                Obviously Im a Web Designer. Web Developer with over 3 years of experience. Experienced with all stages of the development cycle for dynamic web projects.
               </p>
               <div className="mt-4 pt-2">
                 <Link href="/" className="btn btn-primary rounded mb-2 mr-2">Hire me</Link>
@@ -39,7 +39,7 @@ export default function HomeSection () {
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
  // You can use any data fetching library
- const res = await fetch('https://api.github.com/repos/vercel/next.js')
+ const res = await fetch("https://api.github.com/repos/vercel/next.js")
  const posts = await res.json()
      // By returning { props: { data } }, the component
  // will receive `data` as a prop at build time

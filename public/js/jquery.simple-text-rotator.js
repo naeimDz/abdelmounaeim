@@ -20,7 +20,7 @@
 	};
 	
 	$.fx.step.textShadowBlur = function(fx) {
-    $(fx.elem).prop('textShadowBlur', fx.now).css({textShadow: '0 0 ' + Math.floor(fx.now) + 'px black'});
+    $(fx.elem).prop("textShadowBlur", fx.now).css({textShadow: "0 0 " + Math.floor(fx.now) + "px black"});
   };
 	
   $.fn.textrotator = function(options){
@@ -37,7 +37,7 @@
       // animation option
       var rotate = function() {
         switch (settings.animation) { 
-          case 'dissolve':
+          case "dissolve":
             el.animate({
               textShadowBlur:20,
               opacity: 0
@@ -51,7 +51,7 @@
             });
           break;
           
-          case 'flip':
+          case "flip":
             if(el.find(".back").length > 0) {
               el.html(el.find(".back").html())
             }
@@ -61,9 +61,9 @@
             if((index + 1) == array.length) index = -1
             
             el.html("");
-            $("<span class='front'>" + initial + "</span>").appendTo(el);
-            $("<span class='back'>" + array[index + 1] + "</span>").appendTo(el);
-            el.wrapInner("<span class='rotating' />").find(".rotating").hide().addClass("flip").show().css({
+            $("<span class="front">" + initial + "</span>").appendTo(el);
+            $("<span class="back">" + array[index + 1] + "</span>").appendTo(el);
+            el.wrapInner("<span class="rotating" />").find(".rotating").hide().addClass("flip").show().css({
               "-webkit-transform": " rotateY(-180deg)",
               "-moz-transform": " rotateY(-180deg)",
               "-o-transform": " rotateY(-180deg)",
@@ -72,7 +72,7 @@
             
           break;
           
-          case 'flipUp':
+          case "flipUp":
             if(el.find(".back").length > 0) {
               el.html(el.find(".back").html())
             }
@@ -82,9 +82,9 @@
             if((index + 1) == array.length) index = -1
             
             el.html("");
-            $("<span class='front'>" + initial + "</span>").appendTo(el);
-            $("<span class='back'>" + array[index + 1] + "</span>").appendTo(el);
-            el.wrapInner("<span class='rotating' />").find(".rotating").hide().addClass("flip up").show().css({
+            $("<span class="front">" + initial + "</span>").appendTo(el);
+            $("<span class="back">" + array[index + 1] + "</span>").appendTo(el);
+            el.wrapInner("<span class="rotating" />").find(".rotating").hide().addClass("flip up").show().css({
               "-webkit-transform": " rotateX(-180deg)",
               "-moz-transform": " rotateX(-180deg)",
               "-o-transform": " rotateX(-180deg)",
@@ -93,7 +93,7 @@
             
           break;
           
-          case 'flipCube':
+          case "flipCube":
             if(el.find(".back").length > 0) {
               el.html(el.find(".back").html())
             }
@@ -103,9 +103,9 @@
             if((index + 1) == array.length) index = -1
             
             el.html("");
-            $("<span class='front'>" + initial + "</span>").appendTo(el);
-            $("<span class='back'>" + array[index + 1] + "</span>").appendTo(el);
-            el.wrapInner("<span class='rotating' />").find(".rotating").hide().addClass("flip cube").show().css({
+            $("<span class="front">" + initial + "</span>").appendTo(el);
+            $("<span class="back">" + array[index + 1] + "</span>").appendTo(el);
+            el.wrapInner("<span class="rotating" />").find(".rotating").hide().addClass("flip cube").show().css({
               "-webkit-transform": " rotateY(180deg)",
               "-moz-transform": " rotateY(180deg)",
               "-o-transform": " rotateY(180deg)",
@@ -114,7 +114,7 @@
             
           break;
           
-          case 'flipCubeUp':
+          case "flipCubeUp":
             if(el.find(".back").length > 0) {
               el.html(el.find(".back").html())
             }
@@ -124,9 +124,9 @@
             if((index + 1) == array.length) index = -1
             
             el.html("");
-            $("<span class='front'>" + initial + "</span>").appendTo(el);
-            $("<span class='back'>" + array[index + 1] + "</span>").appendTo(el);
-            el.wrapInner("<span class='rotating' />").find(".rotating").hide().addClass("flip cube up").show().css({
+            $("<span class="front">" + initial + "</span>").appendTo(el);
+            $("<span class="back">" + array[index + 1] + "</span>").appendTo(el);
+            el.wrapInner("<span class="rotating" />").find(".rotating").hide().addClass("flip cube up").show().css({
               "-webkit-transform": " rotateX(180deg)",
               "-moz-transform": " rotateX(180deg)",
               "-o-transform": " rotateX(180deg)",
@@ -135,14 +135,14 @@
             
           break;
           
-          case 'spin':
+          case "spin":
             if(el.find(".rotating").length > 0) {
               el.html(el.find(".rotating").html())
             }
             index = $.inArray(el.text(), array)
             if((index + 1) == array.length) index = -1
             
-            el.wrapInner("<span class='rotating spin' />").find(".rotating").hide().text(array[index + 1]).show().css({
+            el.wrapInner("<span class="rotating spin" />").find(".rotating").hide().text(array[index + 1]).show().css({
               "-webkit-transform": " rotate(0) scale(1)",
               "-moz-transform": "rotate(0) scale(1)",
               "-o-transform": "rotate(0) scale(1)",
@@ -150,7 +150,7 @@
             })
           break;
           
-          case 'fade':
+          case "fade":
             el.fadeOut(settings.speed, function() {
               index = $.inArray(el.text(), array)
               if((index + 1) == array.length) index = -1

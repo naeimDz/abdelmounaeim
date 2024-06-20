@@ -913,7 +913,7 @@ button:not(:disabled) {
   content: "\f142";
   font-size: 16px;
   color: #3c4858;
-  font-family: 'Material Design Icons';
+  font-family: "Material Design Icons";
 }
 
 .page-next-level .page-next li:last-child {
@@ -1240,7 +1240,7 @@ p {
 }
 
 .section-title .titles .title.title-line:after, .section-title .titles .title.title-line:before {
-  content: '';
+  content: "";
   position: absolute;
   width: 30px;
   height: 2px;
@@ -1262,7 +1262,7 @@ p {
 }
 
 .section-title .titles span:before, .section-title .titles span:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 16px;
   height: 16px;
@@ -1767,7 +1767,7 @@ p {
 }
 
 .about-hero:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0px;
   right: 3%;
@@ -1783,7 +1783,7 @@ p {
 }
 
 .interests-desc .hobbies:before {
-  content: '';
+  content: "";
   position: absolute;
   width: 1px;
   height: 100%;

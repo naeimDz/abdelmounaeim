@@ -1,6 +1,7 @@
 // pages/index.js
 
-import React from 'react';
+import React from "react";
+import Image from 'next/image';
 
 export default function About() {
     return (
@@ -10,22 +11,24 @@ export default function About() {
                     <div className="row align-items-center">
                         <div className="col-lg-5 col-md-5">
                             <div className="about-hero">
-                                <img src="images/hero.png" className="img-fluid mx-auto d-block about-tween position-relative" alt="Hero" />
+
+                                <Image src="/images/hero.png" height={22} width={100} alt="Hero" className="img-fluid mx-auto d-block about-tween position-relative" />
+
                             </div>
                         </div>
 
                         <div className="col-lg-7 col-md-7 mt-4 pt-2 mt-sm-0 pt-sm-0">
                             <div className="section-title mb-0 ml-lg-5 ml-md-3">
                                 <h4 className="title text-primary mb-3">Cristino Murphy</h4>
-                                <h6 className="designation mb-3">I'm a Passionate <span className="text-primary">Web Designer</span></h6>
+                                <h6 className="designation mb-3">Im a Passionate <span className="text-primary">Web Designer</span></h6>
                                 <p className="text-muted">
-                                    I'm a Web Developer with over 3 years of experience. Experienced with all stages of the development cycle for dynamic web projects. 
+                                    Im a Web Developer with over 3 years of experience. Experienced with all stages of the development cycle for dynamic web projects. 
                                     The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, making it look like readable English.
                                 </p>
                                 <p className="text-muted">
                                     Using Lorem Ipsum provides a more natural text distribution, unlike placeholder text. It enhances the visual appeal of your designs.
                                 </p>
-                                <img src="images/sign.png" height="22" alt="Signature" />
+                                <Image src="/images/sign.png" height={22} width={100} alt="Signature" />
                                 <div className="mt-4">
                                     <a href="#projects" className="btn btn-primary mouse-down">View Portfolio</a>
                                 </div>

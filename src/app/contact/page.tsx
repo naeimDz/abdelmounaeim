@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function Contact() {
     return (
@@ -12,7 +12,7 @@ export default function Contact() {
                                     <h4 className="title title-line text-uppercase mb-4 pb-4">Contact Me</h4>
                                     <span></span>
                                 </div>
-                                <p className="text-muted mx-auto para-desc mb-0">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
+                                <p className="text-muted mx-auto para-desc mb-0">Obviously Im a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
                             </div>
                         </div>
                     </div>

@@ -22,11 +22,11 @@
 ! function($) {
     "use strict";
     // Loader 
-    $(window).on('load', function() {
-        $('#status').fadeOut();
-        $('#preloader').delay(350).fadeOut('slow');
-        $('body').delay(350).css({
-            'overflow': 'visible'
+    $(window).on("load", function() {
+        $("#status").fadeOut();
+        $("#preloader").delay(350).fadeOut("slow");
+        $("body").delay(350).css({
+            "overflow": "visible"
         });
     }); 
 
@@ -41,11 +41,11 @@
         }
     });
 
-    $('.navbar-nav a, .mouse-down').on('click', function(event) {
+    $(".navbar-nav a, .mouse-down").on("click", function(event) {
         var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - 0
-        }, 1500, 'easeInOutExpo');
+        $("html, body").stop().animate({
+            scrollTop: $($anchor.attr("href")).offset().top - 0
+        }, 1500, "easeInOutExpo");
         event.preventDefault();
     });
     
@@ -53,10 +53,10 @@
     $(".navbar-nav").scrollspy({ offset: 70 });
     
     // Magnific Popup
-    $('.mfp-image').magnificPopup({
-        type: 'image',
+    $(".mfp-image").magnificPopup({
+        type: "image",
         closeOnContentClick: true,
-        mainClass: 'mfp-fade',
+        mainClass: "mfp-fade",
         gallery: {
             enabled: true,
             navigateByImgClick: true,
@@ -76,9 +76,9 @@
     // BACK TO TOP
     $(window).scroll(function(){
         if ($(this).scrollTop() > 100) {
-            $('.back-to-top').fadeIn();
+            $(".back-to-top").fadeIn();
         } else {
-            $('.back-to-top').fadeOut();
+            $(".back-to-top").fadeOut();
         }
     }); 
 

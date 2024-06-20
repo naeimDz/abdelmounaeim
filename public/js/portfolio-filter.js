@@ -1,25 +1,25 @@
 // Portfolio
-    $(window).on('load', function () {
-        var $container = $('.portfolioContainer');
+    $(window).on("load", function () {
+        var $container = $(".portfolioContainer");
         $container.isotope({
-            filter: '*',
+            filter: "*",
             animationOptions: {
                 duration: 750,
-                easing: 'linear',
+                easing: "linear",
                 queue: false
             }
         });
 
-        $('.portfolioFilter a').click(function () {
-            $('.portfolioFilter .active').removeClass('active');
-            $(this).addClass('active');
+        $(".portfolioFilter a").click(function () {
+            $(".portfolioFilter .active").removeClass("active");
+            $(this).addClass("active");
 
-            var selector = $(this).attr('data-filter');
+            var selector = $(this).attr("data-filter");
             $container.isotope({
                 filter: selector,
                 animationOptions: {
                     duration: 750,
-                    easing: 'linear',
+                    easing: "linear",
                     queue: false
                 }
             });

@@ -151,7 +151,7 @@ function onYouTubePlayerAPIReady() {
 
 				$YTPlayer.addClass("mb_YTPlayer");
 
-				var property = $YTPlayer.data("property") && typeof $YTPlayer.data("property") == "string" ? eval('(' + $YTPlayer.data("property") + ')') : $YTPlayer.data("property");
+				var property = $YTPlayer.data("property") && typeof $YTPlayer.data("property") == "string" ? eval("(" + $YTPlayer.data("property") + ")") : $YTPlayer.data("property");
 
 				if (typeof property != "undefined" && typeof property.vol != "undefined")
 					property.vol = property.vol == 0 ? property.vol = 1 : property.vol;
@@ -177,12 +177,12 @@ function onYouTubePlayerAPIReady() {
 				YTPlayer.videoID = videoID;
 				YTPlayer.playlistID = playlistID;
 
-				YTPlayer.opt.showAnnotations = (YTPlayer.opt.showAnnotations) ? '0' : '3';
-				var playerVars = { 'autoplay': 0, 'modestbranding': 1, 'controls': 0, 'showinfo': 0, 'rel': 0, 'enablejsapi': 1, 'version': 3, 'playerapiid': playerID, 'origin': '*', 'allowfullscreen': true, 'wmode': 'transparent', 'iv_load_policy': YTPlayer.opt.showAnnotations};
+				YTPlayer.opt.showAnnotations = (YTPlayer.opt.showAnnotations) ? "0" : "3";
+				var playerVars = { "autoplay": 0, "modestbranding": 1, "controls": 0, "showinfo": 0, "rel": 0, "enablejsapi": 1, "version": 3, "playerapiid": playerID, "origin": "*", "allowfullscreen": true, "wmode": "transparent", "iv_load_policy": YTPlayer.opt.showAnnotations};
 
-				var v = document.createElement('video');
+				var v = document.createElement("video");
 				if (v.canPlayType)
-					jQuery.extend(playerVars, {'html5': 1});
+					jQuery.extend(playerVars, {"html5": 1});
 
 				if (jQuery.browser.msie && jQuery.browser.version < 9) {
 					this.opt.opacity = 1;
@@ -316,17 +316,17 @@ function onYouTubePlayerAPIReady() {
 						if (jQuery.browser.mobile && YTPlayer.isPlayer) {
 							new YT.Player(playerID, {
 								videoId: YTPlayer.videoID.toString(),
-								height : '100%',
-								width  : '100%',
+								height : "100%",
+								width  : "100%",
 								videoId: YTPlayer.videoID,
 								events : {
-									'onReady'      : function (event) {
+									"onReady"      : function (event) {
 										YTPlayer.player = event.target;
 										playerBox.css({opacity: 1});
 										YTPlayer.wrapper.css({opacity: YTPlayer.opt.opacity});
 										$YTPlayer.optimizeDisplay();
 									},
-									'onStateChange': function () {}
+									"onStateChange": function () {}
 								}
 							});
 							return;
@@ -336,7 +336,7 @@ function onYouTubePlayerAPIReady() {
 							videoId   : YTPlayer.videoID.toString(),
 							playerVars: playerVars,
 							events    : {
-								'onReady': function (event) {
+								"onReady": function (event) {
 
 									YTPlayer.player = event.target;
 
@@ -402,7 +402,7 @@ function onYouTubePlayerAPIReady() {
 									}, jQuery.browser.chrome ? 1000 : 1);
 								},
 
-								'onStateChange': function (event) {
+								"onStateChange": function (event) {
 									/*
 									 -1 (unstarted)
 									 0 (ended)
@@ -472,10 +472,10 @@ function onYouTubePlayerAPIReady() {
 											controls.find(".mb_YTPPlaypause").html(jQuery.mbYTPlayer.controls.pause);
 
 											if (typeof _gaq != "undefined" && eval(YTPlayer.opt.gaTrack))
-												_gaq.push(['_trackEvent', 'YTPlayer', 'Play', (YTPlayer.videoTitle || YTPlayer.videoID.toString())]);
+												_gaq.push(["_trackEvent", "YTPlayer", "Play", (YTPlayer.videoTitle || YTPlayer.videoID.toString())]);
 
 											if (typeof ga != "undefined" && eval(YTPlayer.opt.gaTrack))
-												ga('send', 'event', 'YTPlayer', 'play', (YTPlayer.videoTitle || YTPlayer.videoID.toString()));
+												ga("send", "event", "YTPlayer", "play", (YTPlayer.videoTitle || YTPlayer.videoID.toString()));
 
 											break;
 
@@ -515,7 +515,7 @@ function onYouTubePlayerAPIReady() {
 
 								},
 
-								'onPlaybackQualityChange': function (e) {
+								"onPlaybackQualityChange": function (e) {
 
 									var quality = e.target.getPlaybackQuality();
 
@@ -525,7 +525,7 @@ function onYouTubePlayerAPIReady() {
 
 								},
 
-								'onError': function (err) {
+								"onError": function (err) {
 
 									if (err.data == 150) {
 										console.log("Embedding this video is restricted by Youtube.");
@@ -549,7 +549,7 @@ function onYouTubePlayerAPIReady() {
 			//Get video info from FEEDS API
 
 			if (!(jQuery.browser.msie && jQuery.browser.version <= 9)) {
-				jQuery.getJSON(jQuery.mbYTPlayer.locationProtocol + '//gdata.youtube.com/feeds/api/videos/' + YTPlayer.videoID + '?v=2&alt=jsonc', function (data, status, xhr) {
+				jQuery.getJSON(jQuery.mbYTPlayer.locationProtocol + "//gdata.youtube.com/feeds/api/videos/" + YTPlayer.videoID + "?v=2&alt=jsonc", function (data, status, xhr) {
 					YTPlayer.dataReceived = true;
 					YTPlayer.videoData = data.data;
 					jQuery(YTPlayer).trigger("YTPChanged");

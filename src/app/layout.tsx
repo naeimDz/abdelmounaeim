@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
+import "../styles/globals.css";
 import Head from "next/head";
 import Script from "next/script";
+import Navbar from "@/components/Portfolio/Navbar";
 
 export const metadata: Metadata = {
   title: "AbdelMounaeim Portfolio",
@@ -30,7 +30,6 @@ export default function RootLayout({
         <link href="css/colors/default.css" rel="stylesheet" id="color-opt" />
       </Head>
       <body>
-        <Navbar />
         <section>{children}</section>
         <Script src="js/jquery.min.js" strategy="beforeInteractive" />
         <Script src="js/bootstrap.bundle.min.js" strategy="beforeInteractive" />

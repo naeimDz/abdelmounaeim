@@ -36,7 +36,7 @@
         this.options = $.extend({}, $.fn.typed.defaults, options);
 
         // text content of element
-        this.baseText = this.el.text() || this.el.attr('placeholder') || '';
+        this.baseText = this.el.text() || this.el.attr("placeholder") || "";
 
         // typing speed
         this.typeSpeed = this.options.typeSpeed;
@@ -79,8 +79,8 @@
         this.cursorChar = this.options.cursorChar;
 
         // attribute to type
-        this.isInput = this.el.is('input');
-        this.attr = this.options.attr || (this.isInput ? 'placeholder' : null);
+        this.isInput = this.el.is("input");
+        this.attr = this.options.attr || (this.isInput ? "placeholder" : null);
 
         // All systems go!
         this.build();
@@ -116,7 +116,7 @@
                    return;
 
                 // varying values for setTimeout during typing
-                // can't be global since number changes each time loop is executed
+                // can"t be global since number changes each time loop is executed
                 var humanize = Math.round(Math.random() * (100 - 30)) + this.typeSpeed;
                 var self = this;
 
@@ -128,14 +128,14 @@
                 // }
                 // else{ self.backDelay = 500; }
 
-                // contain typing function in a timeout humanize'd delay
+                // contain typing function in a timeout humanize"d delay
                 self.timeout = setTimeout(function() {
                     // check for an escape character before a pause value
                     // format: \^\d+ .. eg: ^1000 .. should be able to print the ^ too using ^^
                     // single ^ are removed from string
                     var charPause = 0;
                     var substr = curString.substr(curStrPos);
-                    if (substr.charAt(0) === '^') {
+                    if (substr.charAt(0) === "^") {
                         var skip = 1;  // skip atleast 1
                         if(/^\^\d+/.test(substr)) {
                            substr = /\d+/.exec(substr)[0];
@@ -143,7 +143,7 @@
                            charPause = parseInt(substr);
                         }
 
-                        // strip out the escape character and pause value so they're not printed
+                        // strip out the escape character and pause value so they"re not printed
                         curString = curString.substring(0,curStrPos)+curString.substring(curStrPos+skip);
                     }
 
@@ -203,7 +203,7 @@
                 }
 
                 // varying values for setTimeout during typing
-                // can't be global since number changes each time loop is executed
+                // can"t be global since number changes each time loop is executed
                 var humanize = Math.round(Math.random() * (100 - 30)) + this.backSpeed;
                 var self = this;
 
@@ -213,7 +213,7 @@
                     // check string array position
                     // on the first string, only delete one word
                     // the stopNum actually represents the amount of chars to
-                    // keep in the current string. In my case it's 14.
+                    // keep in the current string. In my case it"s 14.
                     // if (self.arrayPos == 1){
                     //  self.stopNum = 14;
                     // }
@@ -278,8 +278,8 @@
             , reset: function(){
                 var self = this;
                 clearInterval(self.timeout);
-                var id = this.el.attr('id');
-                this.el.after('<span id="' + id + '"/>')
+                var id = this.el.attr("id");
+                this.el.after("<span id="" + id + ""/>")
                 this.el.remove();
                 this.cursor.remove();
                 // Send the callback
@@ -291,10 +291,10 @@
     $.fn.typed = function (option) {
         return this.each(function () {
           var $this = $(this)
-            , data = $this.data('typed')
-            , options = typeof option == 'object' && option;
-          if (!data) $this.data('typed', (data = new Typed(this, options)));
-          if (typeof option == 'string') data[option]();
+            , data = $this.data("typed")
+            , options = typeof option == "object" && option;
+          if (!data) $this.data("typed", (data = new Typed(this, options)));
+          if (typeof option == "string") data[option]();
         });
     };
 

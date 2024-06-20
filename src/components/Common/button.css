@@ -1,0 +1,17 @@
+.button {
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out; /* Add transition for hover effect */
+  }
+  
+  .button.primary {
+    background-color: blue;
+  }
+  
+  .button:hover { /* Apply hover effect to both primary and non-primary styles */
+    background-color: rgba(0, 0, 255, 0.7); /* Darker blue for hover (adjust opacity as needed) */
+  }

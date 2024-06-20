@@ -5,15 +5,6 @@
 @tailwind components;
 @tailwind utilities;*/
 
-.swiper {
-  height: 100%;
-  width: 100%;
-}
-
-.swiper .swiper-pagination-bullet-active {
-  transform: scale(2);
-  transform-origin: center;
-}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -933,7 +924,7 @@
    content: "\f142";
    font-size: 16px;
    color: #3c4858;
-   font-family: 'Material Design Icons';
+   font-family: "Material Design Icons";
  }
  
  .page-next-level .page-next li:last-child {
@@ -1255,7 +1246,7 @@
  }
  
  .section-title .titles .title.title-line:after, .section-title .titles .title.title-line:before {
-   content: '';
+   content: "";
    position: absolute;
    width: 30px;
    height: 2px;
@@ -1277,7 +1268,7 @@
  }
  
  .section-title .titles span:before, .section-title .titles span:after {
-   content: '';
+   content: "";
    position: absolute;
    width: 16px;
    height: 16px;
@@ -1779,7 +1770,7 @@
  }
  
  .about-hero:before {
-   content: '';
+   content: "";
    position: absolute;
    top: 0px;
    right: 3%;
@@ -1795,7 +1786,7 @@
  }
  
  .interests-desc .hobbies:before {
-   content: '';
+   content: "";
    position: absolute;
    width: 1px;
    height: 100%;

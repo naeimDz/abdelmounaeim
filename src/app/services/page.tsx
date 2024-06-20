@@ -7,19 +7,19 @@ interface Service {
   
   const services: Service[] = [
     {
-      title: 'UX / UI Design',
-      description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-      icon: 'airplay', // Replace with actual icon component or path
+      title: "UX / UI Design",
+      description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      icon: "airplay", // Replace with actual icon component or path
     },
     {
-      title: 'iOS App Design',
-      description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-      icon: 'aperture', // Replace with actual icon component or path
+      title: "iOS App Design",
+      description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      icon: "aperture", // Replace with actual icon component or path
     },
     {
-      title: '24 / 7 Support',
-      description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-      icon: 'watch', // Replace with actual icon component or path
+      title: "24 / 7 Support",
+      description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      icon: "watch", // Replace with actual icon component or path
     },
     // ... Add more services objects following the same structure
   ];
@@ -39,7 +39,7 @@ interface Service {
                   <span></span>
                 </div>
                 <p className="text-muted mx-auto para-desc mb-0">
-                  Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.
+                  Obviously Im a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.
                 </p>
               </div>
             </div>
