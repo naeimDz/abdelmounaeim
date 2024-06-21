@@ -1,9 +1,14 @@
-
+import React from "react";
+import { FeedbackIcon } from "../../icons/navbar/feedback-icon";
+import { GithubIcon } from "../../icons/navbar/github-icon";
+import { SupportIcon } from "../../icons/navbar/support-icon";
+import { BurguerButton } from "./burguer-button";
+import { NotificationsDropdown } from "./notifications-dropdown";
+import { UserDropdown } from "./user-dropdown";
+import { SearchIcon } from "@/components/icons/searchicon";
 import { Link } from "@nextui-org/link";
 import { Navbar, NavbarContent } from "@nextui-org/navbar";
-import React from "react";
-
-
+import { Input } from "@nextui-org/input";
 interface Props {
   children: React.ReactNode;
 }
@@ -19,34 +24,43 @@ export const NavbarWrapper = ({ children }: Props) => {
         }}
       >
         <NavbarContent className="md:hidden">
-          <h6>3 line</h6>
+          <BurguerButton />
         </NavbarContent>
         <NavbarContent className="w-full max-md:hidden">
-          <h4>Search bar</h4>
+          <Input
+            startContent={<SearchIcon />}
+            isClearable
+            className="w-full"
+            classNames={{
+              input: "w-full",
+              mainWrapper: "w-full",
+            }}
+            placeholder="Search..."
+          />
         </NavbarContent>
         <NavbarContent
           justify="end"
           className="w-fit data-[justify=end]:flex-grow-0"
         >
           <div className="flex items-center gap-2 max-md:hidden">
-
+            <FeedbackIcon />
             <span>Feedback?</span>
           </div>
 
-         
+          <NotificationsDropdown />
 
           <div className="max-md:hidden">
-          <span>support</span>
+            <SupportIcon />
           </div>
 
           <Link
             href="https://github.com/Siumauricio/nextui-dashboard-template"
             target={"_blank"}
           >
-
+            <GithubIcon />
           </Link>
           <NavbarContent>
- <h3>user</h3>
+            <UserDropdown />
           </NavbarContent>
         </NavbarContent>
       </Navbar>
