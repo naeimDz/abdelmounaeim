@@ -21,6 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+    <html lang="en">
+            <body>
     <AuthProvider>
     <ErrorProvider>
       <ThemeProvider>
@@ -28,14 +30,14 @@ export default function RootLayout({
           <NotificationProvider>
             <SettingsProvider>
               <ModalProvider>
-    <html lang="en">
+
       
-      <body>
+
   
         {children}
         
-      </body>
-    </html>
+    
+
     </ModalProvider>
               </SettingsProvider>
             </NotificationProvider>
@@ -43,6 +45,8 @@ export default function RootLayout({
         </ThemeProvider>
       </ErrorProvider>
     </AuthProvider>
+    </body>
+    </html>
   );
 }
 

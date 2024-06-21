@@ -38,6 +38,8 @@ export const NavbarWrapper = ({ children }: Props) => {
             placeholder="Search..."
           />
         </NavbarContent>
+
+        
         <NavbarContent
           justify="end"
           className="w-fit data-[justify=end]:flex-grow-0"

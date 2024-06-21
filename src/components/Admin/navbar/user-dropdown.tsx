@@ -10,7 +10,7 @@ export const UserDropdown = () => {
     <Dropdown>
       <NavbarItem>
         <DropdownTrigger>
-          <Avatar
+        <Avatar
             as="button"
             color="secondary"
             size="md"

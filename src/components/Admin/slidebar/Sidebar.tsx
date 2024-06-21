@@ -120,10 +120,11 @@ export const SidebarWrapper = () => {
               </div>
             </Tooltip>
             <Tooltip content={"Profile"} color="primary">
-              <Avatar
-                src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-                size="sm"
-              />
+            <Avatar
+              
+              src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+              size="sm"
+            /> 
             </Tooltip>
           </div>
         </div>

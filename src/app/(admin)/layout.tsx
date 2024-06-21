@@ -5,7 +5,7 @@ export default function AdminLayout({children}: {children: React.ReactNode}) {
     return (
         <section>
  <NavbarWrapper>{children}</NavbarWrapper>  
- <SidebarWrapper ></SidebarWrapper>        
+ <SidebarWrapper ></SidebarWrapper>       
         </section>
     );
 }
