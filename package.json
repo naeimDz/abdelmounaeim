@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/accordion": "^2.0.35",
     "@nextui-org/avatar": "^2.0.30",
     "@nextui-org/dropdown": "^2.1.26",
     "@nextui-org/input": "^2.2.2",
@@ -17,6 +18,7 @@
     "@nextui-org/switch": "^2.0.31",
     "@nextui-org/system": "^2.2.2",
     "@nextui-org/theme": "^2.2.6",
+    "@nextui-org/tooltip": "^2.0.36",
     "bootstrap": "^5.3.3",
     "firebase": "^10.12.2",
     "framer-motion": "^11.2.11",
