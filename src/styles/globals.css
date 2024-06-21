@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Roboto&display=swap");
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-/*@tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities;*/
+@tailwind utilities;
 
 
 :root {

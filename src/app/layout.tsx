@@ -45,7 +45,7 @@ export default function RootLayout({
         <link href="css/colors/default.css" rel="stylesheet" id="color-opt" />
       </Head>
       <body>
-      <Navbar />
+  
         <section>{children}</section>
         <Script src="js/jquery.min.js" strategy="beforeInteractive" />
         <Script src="js/bootstrap.bundle.min.js" strategy="beforeInteractive" />
